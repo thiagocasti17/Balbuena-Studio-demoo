@@ -1,0 +1,416 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Joel Balbuena Studio | Especialistas en color en Villa Urquiza</title>
+<meta name="description" content="Estudio de color en Villa Urquiza: balayage, mechas, tratamientos y cortes. Precios claros y turnos online.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,700&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#F7F5F0; --surface:#FFFFFF; --ink:#1A1A1F; --muted:#5F5A52; --line:#DDD6C8;
+  --accent:#8C5B12; --accent-ink:#FFFFFF; --hero:#17171C; --hero-ink:#F6F1E7;
+  --display:"Fraunces",Georgia,"Times New Roman",serif;
+  --body:"DM Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px);
+  padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#121215; --surface:#1C1C21; --ink:#F4EFE6; --muted:#B3ADA0; --line:#34322D;
+    --accent:#E3B764; --accent-ink:#17171C; --hero:#17171C; color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#121215; --surface:#1C1C21; --ink:#F4EFE6; --muted:#B3ADA0; --line:#34322D;
+  --accent:#E3B764; --accent-ink:#17171C; --hero:#17171C; color-scheme:dark;
+}
+html{scroll-padding-top:calc(env(safe-area-inset-top,0px) + 72px);scroll-behavior:smooth}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:var(--body);font-size:17px;line-height:1.6}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:20;background:var(--bg)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--accent);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 22px}
+header{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:var(--bg);border-bottom:1px solid var(--line)}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;height:68px}
+.brand{font-family:var(--display);font-weight:700;font-size:1.2rem;text-decoration:none}
+nav{display:flex;align-items:center;gap:26px}
+nav a.l{text-decoration:none;font-weight:500;color:var(--muted)}
+nav a.l:hover{color:var(--ink)}
+.btn{display:inline-block;padding:13px 24px;border-radius:999px;background:var(--accent);color:var(--accent-ink);font-weight:700;text-decoration:none;border:2px solid var(--accent)}
+.btn.ghost{background:transparent;color:var(--ink);border-color:var(--line)}
+.btn.light{background:var(--hero-ink);color:var(--hero);border-color:var(--hero-ink)}
+.btn.line{background:transparent;color:var(--hero-ink);border-color:rgba(247,238,250,.4)}
+.btn:hover{filter:brightness(1.08)}
+.hero{margin:22px 0 0}
+.hero .box{position:relative;overflow:hidden;border-radius:28px;background:var(--hero);color:var(--hero-ink);display:grid;grid-template-columns:1.1fr .9fr;align-items:center;min-height:500px}
+.hero .txt{padding:56px 48px;position:relative;z-index:1}
+.chip{display:inline-flex;align-items:center;gap:8px;background:rgba(247,238,250,.12);padding:7px 14px;border-radius:999px;font-size:.92rem;margin-bottom:22px}
+h1{font-family:var(--display);font-weight:700;font-size:clamp(2.3rem,5.6vw,4rem);line-height:1.05;margin:0 0 18px;letter-spacing:-.015em}
+.hero p.lead{color:rgba(247,238,250,.82);max-width:30em;margin:0 0 28px}
+.actions{display:flex;flex-wrap:wrap;gap:12px}
+.hero svg.art{width:100%;height:100%;min-height:380px;display:block}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin:28px 0 0;border:1px solid var(--line);border-radius:18px;background:var(--surface)}
+.facts div{padding:20px 24px;border-right:1px solid var(--line)}
+.facts div:last-child{border-right:0}
+.facts b{display:block;font-family:var(--display);font-size:1.6rem;line-height:1.2}
+.facts span{color:var(--muted);font-size:.95rem}
+section{padding:72px 0}
+.head{max-width:36em;margin:0 0 36px}
+h2{font-family:var(--display);font-size:clamp(1.8rem,4vw,2.6rem);line-height:1.12;margin:0 0 12px;letter-spacing:-.01em}
+.sub{color:var(--muted);margin:0}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:28px}
+.card svg{width:34px;height:34px;color:var(--accent);margin-bottom:16px}
+.card h3{font-family:var(--display);font-size:1.3rem;margin:0 0 8px}
+.card p{margin:0;color:var(--muted)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;list-style:none;padding:0;margin:0;counter-reset:s}
+.steps li{counter-increment:s;border-top:3px solid var(--accent);padding-top:16px}
+.steps li::before{content:counter(s);font-family:var(--display);font-weight:700;font-size:1.9rem;color:var(--accent);display:block;line-height:1.1;margin-bottom:6px}
+.steps h3{margin:0 0 6px;font-family:var(--display);font-size:1.15rem}
+.steps p{margin:0;color:var(--muted);font-size:.97rem}
+.tones{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+.ladder{display:flex;gap:8px;height:360px}
+.sw{flex:1;border:0;border-radius:999px;cursor:pointer;background:var(--c);transition:flex-grow .35s ease;padding:0;box-shadow:inset 0 0 0 1px rgba(0,0,0,.12)}
+.sw[aria-pressed="true"]{flex-grow:3.2}
+.cap strong{display:block;font-family:var(--display);font-size:2rem;line-height:1.15;margin-bottom:8px}
+.cap p{color:var(--muted);margin:0 0 22px;min-height:3.2em}
+.alt{background:var(--surface);border-block:1px solid var(--line)}
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.quotes blockquote{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:20px;padding:26px}
+.quotes blockquote p{margin:0 0 16px;font-family:var(--display);font-size:1.12rem;line-height:1.45}
+.quotes footer{color:var(--muted);font-size:.9rem;border:0;padding:0}
+.stars{color:#D9A21B;letter-spacing:2px;margin-bottom:10px}
+.team{display:grid;grid-template-columns:auto 1fr;gap:28px;align-items:center;max-width:720px}
+.avatar{width:120px;height:120px;border-radius:50%;background:linear-gradient(135deg,#A8572F,#C99A4B 55%,#E3CC9A);display:grid;place-items:center;font-family:var(--display);font-weight:700;font-size:2.6rem;color:#17171C}
+.team h3{font-family:var(--display);font-size:1.5rem;margin:0 0 6px}
+.team p{margin:0;color:var(--muted)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+details summary{cursor:pointer;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:16px}
+details summary::after{content:"+";font-size:1.4rem;line-height:1;color:var(--accent)}
+details[open] summary::after{content:"\2013"}
+details p{margin:12px 0 0;color:var(--muted);max-width:40em}
+.visit{display:grid;grid-template-columns:1fr 1fr;gap:40px}
+.hours{list-style:none;margin:0 0 22px;padding:0}
+.hours li{display:flex;justify-content:space-between;gap:16px;padding:10px 0;border-bottom:1px solid var(--line)}
+.hours .off{color:var(--muted)}
+address{font-style:normal;margin:0 0 22px;font-size:1.1rem}
+.cta .box{border-radius:28px;background:var(--hero);color:var(--hero-ink);padding:56px 28px;text-align:center}
+.cta h2{margin-bottom:12px}
+.cta p{color:rgba(247,238,250,.82);margin:0 auto 26px;max-width:30em}
+.cta .actions{justify-content:center}
+.foot{padding:32px 0 40px;color:var(--muted);font-size:.9rem;border-top:1px solid var(--line)}
+.foot .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px}
+@media (max-width:820px){
+  nav a.l{display:none}
+  .hero .box,.tones,.visit{grid-template-columns:1fr}
+  .hero .txt{padding:36px 26px 8px}
+  .hero svg.art{min-height:240px;height:260px}
+  .facts{grid-template-columns:1fr}
+  .facts div{border-right:0;border-bottom:1px solid var(--line)}
+  .facts div:last-child{border-bottom:0}
+  .grid2,.quotes,.steps{grid-template-columns:1fr}
+  .ladder{height:240px}
+  section{padding:52px 0}
+}
+@media (prefers-reduced-motion:reduce){.sw{transition:none}html{scroll-behavior:auto}}
+
+.banner{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px 24px;background:var(--hero);color:var(--hero-ink);border-radius:20px;padding:22px 28px;margin-top:28px}
+.banner b{font-family:var(--display);font-size:1.25rem}
+.banner span.c{font-family:var(--display);font-size:1.5rem;color:#E3B764}
+.tabs{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 22px}
+.tab{padding:10px 18px;border-radius:999px;border:1.5px solid var(--line);background:transparent;color:var(--ink);font:inherit;font-weight:500;cursor:pointer}
+.tab[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.price{display:grid;grid-template-columns:1fr auto;gap:4px 24px;padding:16px 0;border-bottom:1px solid var(--line)}
+.price h3{margin:0;font-family:var(--display);font-size:1.15rem}
+.price .p{font-weight:700;white-space:nowrap;text-align:right}
+.price small{grid-column:1/-1;color:var(--muted);font-size:.93rem}
+.note{margin:24px 0 0;padding:18px 22px;border-radius:16px;background:var(--surface);border:1px solid var(--line);color:var(--muted);font-size:.95rem}
+.note li{margin:4px 0}
+.form{display:grid;grid-template-columns:1fr 1fr;gap:14px;background:var(--surface);border:1px solid var(--line);border-radius:22px;padding:28px}
+.form label{display:grid;gap:6px;font-weight:500;font-size:.95rem}
+.form .full{grid-column:1/-1}
+.form input,.form select{font:inherit;padding:12px 14px;border-radius:12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink)}
+.ppl{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.person{display:flex;gap:18px;align-items:center}
+.person h3{font-family:var(--display);font-size:1.3rem;margin:0 0 4px}
+.person p{margin:0;color:var(--muted)}
+@media (max-width:820px){.form,.ppl{grid-template-columns:1fr}.price{grid-template-columns:1fr}.price .p{text-align:left}}
+
+/* ---- Pantalla de carga y movimiento ---- */
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+@keyframes settle{from{transform:scale(1.1)}to{transform:scale(1)}}
+@keyframes drift{0%,100%{transform:translateY(0)}50%{transform:translateY(-9px)}}
+#pbar{position:fixed;top:env(safe-area-inset-top,0px);left:0;right:0;height:3px;background:var(--accent);transform:scaleX(0);transform-origin:left;z-index:30}
+header{transition:box-shadow .3s ease}
+header.scrolled{box-shadow:0 6px 24px rgba(0,0,0,.08)}
+.hero .txt>*{animation:fadeUp .8s cubic-bezier(.2,.7,.2,1) both;animation-delay:calc(2.7s + var(--i,0)*.12s)}
+.hero .txt>*:nth-child(2){--i:1}.hero .txt>*:nth-child(3){--i:2}.hero .txt>*:nth-child(4){--i:3}
+.hero .art{animation:settle 1.8s cubic-bezier(.2,.7,.2,1) 2.6s both}
+.hero svg.art path{animation:drift 7s ease-in-out infinite}
+.hero svg.art path:nth-child(odd){animation-delay:-3s}
+.hero svg.art path:nth-child(3n){animation-delay:-5s}
+.rv{opacity:0;transform:translateY(26px);transition:opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+.btn{transition:translate .2s ease,filter .2s ease,box-shadow .2s ease}
+.btn:hover{translate:0 -2px;box-shadow:0 8px 20px rgba(0,0,0,.18)}
+.card{transition:translate .25s ease,box-shadow .25s ease,opacity .7s ease,transform .7s cubic-bezier(.2,.7,.2,1)}
+.card:hover{translate:0 -4px;box-shadow:0 14px 34px rgba(0,0,0,.1)}
+.gallery img{transition:translate .3s ease,box-shadow .3s ease}
+.gallery figure:hover img{translate:0 -4px;box-shadow:0 14px 34px rgba(0,0,0,.15)}
+#list .price{animation:fadeUp .4s ease both}
+#list .price:nth-child(2){animation-delay:.05s}#list .price:nth-child(3){animation-delay:.1s}#list .price:nth-child(4){animation-delay:.15s}#list .price:nth-child(5){animation-delay:.2s}#list .price:nth-child(6){animation-delay:.25s}#list .price:nth-child(n+7){animation-delay:.3s}
+@media (prefers-reduced-motion:reduce){
+  #splash{display:none}#pbar{display:none}
+  .hero .txt>*,.hero .art,.hero svg.art path,.sp-svg path,#list .price{animation:none}
+  .rv{opacity:1;transform:none;transition:none}
+}
+
+/* ---- Intro con tijeras, cursor y detalles ---- */
+@keyframes snipA{from{transform:rotate(14deg)}to{transform:rotate(0)}}
+@keyframes snipB{from{transform:rotate(-14deg)}to{transform:rotate(0)}}
+@keyframes lineGrow{to{transform:scaleY(1)}}
+@keyframes lineOut{to{opacity:0}}
+@keyframes scisGo{to{transform:translateY(calc(100vh - 80px))}}
+@keyframes partL{to{transform:translateX(-101%)}}
+@keyframes partR{to{transform:translateX(101%)}}
+@keyframes nameIn{from{opacity:0;letter-spacing:.3em;transform:translateY(8px)}to{opacity:1;letter-spacing:.02em;transform:none}}
+@keyframes ornGrow{to{width:150px}}
+@keyframes spEnd{to{visibility:hidden}}
+@keyframes burst{from{opacity:1;transform:translate(0,0) scale(1)}to{opacity:0;transform:translate(var(--dx),var(--dy)) scale(.2)}}
+#splash{position:fixed;inset:0;z-index:100;pointer-events:none;color:#F6F1E7;animation:spEnd .01s linear 3.6s forwards}
+.sp-half{position:absolute;top:0;bottom:0;width:50.3%}
+.sp-half.l{left:0;background:radial-gradient(120% 90% at 100% 50%,#2A2A33,#17171C 70%);animation:partL .9s cubic-bezier(.7,0,.2,1) 2.6s forwards}
+.sp-half.r{right:0;background:radial-gradient(120% 90% at 0% 50%,#2A2A33,#17171C 70%);animation:partR .9s cubic-bezier(.7,0,.2,1) 2.6s forwards}
+.sp-line{position:absolute;left:50%;top:0;bottom:0;width:2px;margin-left:-1px;background:linear-gradient(#E3B764,#F6F1E7);transform:scaleY(0);transform-origin:top;animation:lineGrow 1.8s cubic-bezier(.45,0,.3,1) .3s forwards,lineOut .3s ease 2.5s forwards}
+.sp-scis{position:absolute;left:50%;top:0;width:48px;margin-left:-24px;transform:translateY(-80px);animation:scisGo 1.8s cubic-bezier(.45,0,.3,1) .3s forwards,lineOut .25s ease 2.15s forwards}
+.sp-s{display:block;width:48px;height:auto;transform:rotate(180deg)}
+.b1,.b2{transform-origin:30px 56px}
+.sp-s .b1{animation:snipA .26s ease-in-out infinite alternate}
+.sp-s .b2{animation:snipB .26s ease-in-out infinite alternate}
+.sp-center{position:absolute;inset:0;display:grid;place-content:center;text-align:center;padding:0 20px;animation:lineOut .35s ease 2.3s forwards}
+.sp-name{font-family:var(--display);font-weight:700;font-size:clamp(2.2rem,8vw,4rem);line-height:1.05;opacity:0;animation:nameIn 1s cubic-bezier(.2,.7,.2,1) 1.3s forwards}
+.sp-orn{height:2px;width:0;background:#E3B764;margin:16px auto 12px;animation:ornGrow .8s ease 1.7s forwards}
+.sp-sub{opacity:0;color:rgba(246,241,231,.78);letter-spacing:.04em;animation:fadeUp .7s ease 1.9s forwards}
+.orn{display:flex;align-items:center;gap:14px;max-width:1080px;margin:0 auto;padding:0 22px;color:var(--accent)}
+.orn .l{flex:1;border-top:1.5px dashed var(--line)}
+.orn svg{width:26px;height:26px;flex:none}
+.rv h2::after{transform:scaleX(0)}
+.rv.in h2::after{transform:scaleX(1)}
+.head h2::after{content:"";display:block;width:64px;height:3px;border-radius:3px;background:var(--accent);margin-top:14px;transform-origin:left;transition:transform .8s ease .35s}
+.hint{margin:-6px 0 18px;color:var(--muted);font-size:.95rem}
+.price{border-bottom:1.5px dashed var(--line);cursor:pointer}
+.price h3{display:flex;align-items:center}
+.price h3::before{content:"";width:0;height:20px;margin-right:0;background:url("data:image/svg+xml,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2024%2024%27%20fill%3D%27none%27%20stroke%3D%27%23B8842A%27%20stroke-width%3D%271.8%27%20stroke-linecap%3D%27round%27%20stroke-linejoin%3D%27round%27%3E%3Ccircle%20cx%3D%276%27%20cy%3D%276%27%20r%3D%273%27%2F%3E%3Ccircle%20cx%3D%276%27%20cy%3D%2718%27%20r%3D%273%27%2F%3E%3Cpath%20d%3D%27M8.5%207.5L21%2018M8.5%2016.5L21%206%27%2F%3E%3C%2Fsvg%3E") no-repeat center/contain;transition:width .25s ease,margin .25s ease}
+.price:hover h3::before,.price:focus-visible h3::before{width:22px;margin-right:10px}
+.price:hover .p{color:var(--accent)}
+#cur{position:fixed;left:0;top:0;z-index:200;pointer-events:none;opacity:0;transition:opacity .2s ease}
+body.has-cur #cur{opacity:1}
+body.has-cur #cur.off{opacity:0}
+#cur svg{display:block;width:34px;height:auto;margin:-1px 0 0 -17px;transform-origin:17px 1px;transform:rotate(-32deg);filter:drop-shadow(0 2px 3px rgba(0,0,0,.35))}
+#cur .b1{transform:rotate(5deg);transition:transform .14s ease}
+#cur .b2{transform:rotate(-5deg);transition:transform .14s ease}
+#cur.open .b1{transform:rotate(15deg)}
+#cur.open .b2{transform:rotate(-15deg)}
+#cur.down .b1,#cur.down .b2{transform:rotate(0)}
+body.has-cur *{cursor:none}
+body.has-cur input,body.has-cur select,body.has-cur textarea,body.has-cur option{cursor:auto}
+.sn{position:fixed;width:6px;height:6px;margin:-3px 0 0 -3px;border-radius:50%;background:#E3B764;pointer-events:none;z-index:199;animation:burst .6s ease-out forwards}
+@media (pointer:coarse){#cur{display:none}}
+@media (prefers-reduced-motion:reduce){.sn{display:none}.sp-s .b1,.sp-s .b2{animation:none}.head h2::after{transition:none}.rv h2::after{transform:none}}
+</style></head>
+<body>
+<div id="splash" aria-hidden="true"><div class="sp-half l"></div><div class="sp-half r"></div><div class="sp-line"></div><div class="sp-scis"><svg class="sp-s" viewBox="0 0 60 100" aria-hidden="true"><g class="b1"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L23 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><g class="b2"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L37 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="40" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><circle cx="30" cy="56" r="3" fill="#E3B764" stroke="#17171C" stroke-width="1"/></svg></div><div class="sp-center"><div class="sp-name">Joel Balbuena Studio</div><div class="sp-orn"></div><div class="sp-sub">Especialistas en color en Villa Urquiza</div></div></div>
+<div id="pbar"></div>
+<div id="cur" aria-hidden="true"><svg class="cs" viewBox="0 0 60 100" aria-hidden="true"><g class="b1"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L23 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="20" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><g class="b2"><path d="M27 56 L30.5 2 L34 56Z" fill="#E9E6DF" stroke="#17171C" stroke-width="1.3" stroke-linejoin="round"/><path d="M30 56 L37 77" stroke="#E3B764" stroke-width="3.4" stroke-linecap="round"/><circle cx="40" cy="86" r="9" fill="none" stroke="#E3B764" stroke-width="3.6"/></g><circle cx="30" cy="56" r="3" fill="#E3B764" stroke="#17171C" stroke-width="1"/></svg></div>
+
+<header><div class="wrap">
+  <a class="brand" href="#inicio">Joel Balbuena Studio</a>
+  <nav>
+    <a class="l" href="#precios">Servicios y precios</a>
+    <a class="l" href="#turnos">Turnos</a>
+    <a class="l" href="#equipo">Equipo</a>
+    <a class="l" href="#visitanos">Visitanos</a>
+    <a class="btn" href="#turnos">Reservar</a>
+  </nav>
+</div></header>
+<main id="inicio">
+  <div class="wrap">
+    <div class="hero"><div class="box">
+      <div class="txt">
+        <span class="chip">Lunes a sábados, de 10 a 19 hs</span>
+        <h1>Especialistas en color en Villa Urquiza.</h1>
+        <p class="lead">Coloración con diagnóstico personalizado para que tu cabello luzca el color que querés y quede lo más sano posible.</p>
+        <div class="actions"><a class="btn light" href="#turnos">Reservar turno</a><a class="btn line" href="#precios">Ver precios</a></div>
+      </div>
+      <svg class="art" viewBox="0 0 400 420" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+          <defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity=".0"/><stop offset="1" stop-color="#fff" stop-opacity=".25"/></linearGradient></defs>
+          <g fill="none" stroke-linecap="round">
+            <path d="M-20 40 C120 0 210 150 430 70" stroke="#E3CC9A" stroke-width="22"/>
+            <path d="M-20 100 C140 50 230 210 430 130" stroke="#C99A4B" stroke-width="24"/>
+            <path d="M-20 165 C150 110 240 270 430 195" stroke="#A8572F" stroke-width="26"/>
+            <path d="M-20 235 C140 180 250 340 430 262" stroke="#5A3A2A" stroke-width="26"/>
+            <path d="M-20 305 C140 250 240 400 430 330" stroke="#B9B6BC" stroke-width="24"/>
+            <path d="M-20 372 C130 320 230 460 430 395" stroke="#E4E3E8" stroke-width="22"/>
+            <path d="M-20 30 C120 -10 210 140 430 60" stroke="url(#g)" stroke-width="6"/>
+            <path d="M-20 155 C150 100 240 260 430 185" stroke="url(#g)" stroke-width="7"/>
+            <path d="M-20 295 C140 240 240 390 430 320" stroke="url(#g)" stroke-width="6"/>
+          </g>
+        </svg>
+    </div></div>
+    <div class="facts">
+      <div><b>Desde $15.000</b><span>Consulta con diagnóstico</span></div>
+      <div><b>20% off</b><span>Pagando en efectivo, en trabajos de color</span></div>
+      <div><b>Viernes 18 hs</b><span>Se habilitan los turnos de la semana</span></div>
+    </div>
+  </div>
+
+  <div class="orn" aria-hidden="true"><span class="l"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L21 18M8.5 16.5L21 6"/></svg><span class="l"></span></div>
+<section id="precios"><div class="wrap">
+    <div class="head"><h2>Servicios y precios</h2><p class="sub">Precios claros desde el primer momento, para que sepas qué esperar antes de reservar.</p></div>
+    <div class="tabs" id="tabs" role="group" aria-label="Categorías"></div>
+    <p class="hint">Tocá un servicio para elegirlo y pedir turno.</p>
+    <div id="list"></div>
+    <ul class="note">
+      <li>Todos los valores son “desde”, no finales. En color y decoloración, el valor final se define con un diagnóstico personalizado en el salón.</li>
+      <li>Pagando en efectivo, 20% de descuento en trabajos de color.</li>
+      <li>Para reservar se requiere una seña. No se permiten acompañantes en el establecimiento.</li>
+    </ul>
+  </div></section>
+
+  <section id="turnos" class="alt"><div class="wrap">
+    <div class="head"><h2>Reservá tu turno</h2><p class="sub">Los turnos se habilitan semanalmente, todos los viernes a las 18 hs.</p></div>
+    <div class="banner"><b>Próxima apertura de turnos</b><span class="c" id="cd">Calculando</span></div>
+    <ol class="steps" style="margin:36px 0">
+      <li><h3>Elegí el servicio</h3><p>Mirá la lista de precios y elegí lo que necesitás. Si no sabés, elegí “No sé qué hacerme”.</p></li>
+      <li><h3>Mandanos tu pedido</h3><p>Completá el formulario y se abre WhatsApp con el mensaje listo.</p></li>
+      <li><h3>Confirmá con la seña</h3><p>Te pasamos los datos para señar y dejar el turno confirmado.</p></li>
+      <li><h3>Diagnóstico en el salón</h3><p>Evaluamos tu cabello y definimos el trabajo y el valor final.</p></li>
+    </ol>
+    <div class="form" id="form">
+      <label>Tu nombre<input id="f-n" type="text" placeholder="Nombre y apellido"></label>
+      <label>Servicio<select id="f-s"></select></label>
+      <label>Largo del cabello<select id="f-l"><option>No aplica</option><option>Corto</option><option>Medio</option><option>Largo</option><option>Extra largo</option><option>XXL</option></select></label>
+      <label>Día preferido<select id="f-d"><option>Lunes</option><option>Martes</option><option>Miércoles</option><option>Jueves</option><option>Viernes</option><option>Sábado</option></select></label>
+      <div class="full"><a class="btn" id="f-go" href="#" target="_blank" rel="noopener">Enviar por WhatsApp</a></div>
+    </div>
+  </div></section>
+
+  <div class="orn" aria-hidden="true"><span class="l"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="6" r="3"/><circle cx="6" cy="18" r="3"/><path d="M8.5 7.5L21 18M8.5 16.5L21 6"/></svg><span class="l"></span></div>
+<section id="equipo"><div class="wrap">
+    <div class="head"><h2>El equipo</h2><p class="sub">Profesionales especializados en color, cortes y tratamientos.</p></div>
+    <div class="ppl">
+      <div class="card person"><div class="avatar" aria-hidden="true">J</div><div><h3>Joel Balbuena</h3><p>Director del estudio. Atiende los cortes con Joel y supervisa el trabajo de color.</p></div></div>
+      <div class="card person"><div class="avatar" aria-hidden="true">C</div><div><h3>Equipo de coloristas</h3><p>Balayage, mechas, decoloración, correcciones y tratamientos de reparación.</p></div></div>
+    </div>
+  </div></section>
+
+  <section class="alt"><div class="wrap">
+    <div class="head"><h2>Preguntas frecuentes</h2></div>
+    <details><summary>¿Cuándo se habilitan los turnos?</summary><p>Todos los viernes a las 18 hs se abren los turnos de la semana.</p></details>
+    <details><summary>¿Los precios son finales?</summary><p>No, son valores “desde”. En color y decoloración, el precio final depende del diagnóstico en el salón y de los servicios necesarios para llegar al resultado acordado.</p></details>
+    <details><summary>¿Qué es el turno “No sé qué hacerme”?</summary><p>Es para quienes quieren un trabajo de color pero no saben cuál. No es solo una consulta: se hace el asesoramiento y el trabajo el mismo día.</p></details>
+    <details><summary>¿Hay descuento por pagar en efectivo?</summary><p>Sí, 20% de descuento en trabajos de color. Aceptamos todos los medios de pago.</p></details>
+    <details><summary>¿Puedo ir con acompañante?</summary><p>No se permiten acompañantes en el establecimiento, salvo que la persona atendida sea menor de edad.</p></details>
+  </div></section>
+
+  <section id="visitanos"><div class="wrap visit">
+    <div><h2>Horarios</h2><ul class="hours"><li><span>Lunes a sábados</span><span>10:00 a 19:00</span></li><li class="off"><span>Domingos</span><span>Cerrado</span></li></ul></div>
+    <div><h2>Dónde estamos</h2><address>Mendoza 4650<br>Villa Urquiza, Ciudad de Buenos Aires</address>
+      <div class="actions"><a class="btn ghost" href="https://www.google.com/maps/search/?api=1&query=-34.5740356,-58.4791908&query_place_id=ChIJez9vxGW2vJURNOyuoGf_iIg" target="_blank" rel="noopener">Cómo llegar</a><a class="btn ghost" href="https://www.instagram.com/balbuenastudio/" target="_blank" rel="noopener">Instagram</a></div></div>
+  </div></section>
+
+  <section class="cta" style="padding-top:0"><div class="wrap"><div class="box">
+    <h2>Tu próximo color empieza acá</h2><p>Elegí tu servicio y escribinos por WhatsApp para dejar tu turno.</p>
+    <div class="actions"><a class="btn light" href="#turnos">Reservar turno</a></div>
+  </div></div></section>
+</main>
+<div class="foot"><div class="wrap"><span>Joel Balbuena Studio</span><span>Mendoza 4650, Villa Urquiza. Propuesta de sitio de ejemplo.</span></div></div>
+<script>
+(function(){
+  var WA="https://wa.me/549XXXXXXXXXX?text=";
+  var D={
+  "Color":[["Tintura tono sobre tono","Desde $90.000","Cabello completo"],["Crecimiento con tintura","Desde $70.000","Retoque de raíz"],["Mechas con tintura (oscuritos)","Desde $70.000","Para oscurecer y dar profundidad"],["Color de la casa (Premium)","Desde $100.000",""],["Baño de luz","Desde $50.000",""],["Arreglo de color","Consultar","Se define con diagnóstico"],["No sé qué hacerme","Consultar","Asesoramiento y trabajo el mismo día; no es solo una consulta"]],
+  "Mechas y balayage":[["Balayage, mechas, iluminación","Desde $75.000","Corto $75.000, medio $90.000, largo $100.000, extra largo $120.000, XXL $140.000"],["Balayage de la casa (Premium)","Desde $90.000","Corto $90.000, medio $110.000, largo $130.000, extra largo $140.000, XXL $200.000"],["Golden Glow","Desde $70.000","Mechas en poca cantidad, sin decoloración. Corto $70.000, medio $90.000, largo $100.000, extra largo $120.000"],["Decoloración","Desde $70.000",""],["Decoloración de la casa (Premium)","Desde $110.000","Base más clara y uniforme, con productos premium importados"],["Retoque de mechas (zona T)","Desde $40.000","Corto $40.000, medio $50.000, largo $60.000, extra largo $70.000, XXL $75.000"]],
+  "Tratamientos":[["Hidratación o nutrición","Desde $30.000",""],["Biotina","Desde $50.000","Fortalece desde la raíz; no alisa"],["Ozonoterapia","Desde $50.000",""],["Olaplex de la casa (Premium)","Desde $60.000","Repara los enlaces capilares dañados"],["K18 reparador biomolecular","Desde $70.000",""],["Celebrity Hair (Premium)","Desde $90.000","Con ozonoterapia y productos de alta gama"],["Células madres","Desde $70.000","Hasta $170.000 según largo y cantidad"],["Alisado sin formol Liss Pro Keratin","Desde $100.000","Hasta $210.000 según largo y cantidad"]],
+  "Cortes":[["Corte","$40.000","No incluye lavado: traer el cabello limpio y seco"],["Corte con Joel","$65.000",""],["Corte masculino","$40.000",""],["Promo corte + hidratación","$60.000",""]],
+  "Consulta":[["Consulta","Desde $15.000","Diagnóstico del cabello y prueba de mecha si hace falta"]]
+  };
+  var tabs=document.getElementById("tabs"), list=document.getElementById("list"), sel=document.getElementById("f-s"), tb=[];
+  function show(k){
+    tb.forEach(function(b){b.setAttribute("aria-pressed",b.textContent===k?"true":"false")});
+    list.innerHTML=D[k].map(function(r){return '<div class="price" role="button" tabindex="0" data-s="'+r[0]+'"><h3>'+r[0]+'</h3><span class="p">'+r[1]+'</span>'+(r[2]?'<small>'+r[2]+'</small>':'')+'</div>'}).join("");
+  }
+  Object.keys(D).forEach(function(k,i){
+    var b=document.createElement("button");b.type="button";b.className="tab";b.textContent=k;b.setAttribute("aria-pressed","false");
+    b.addEventListener("click",function(){show(k)});tabs.appendChild(b);tb.push(b);
+    D[k].forEach(function(r){var o=document.createElement("option");o.textContent=r[0];sel.appendChild(o)});
+  });
+  show("Color");
+  var go=document.getElementById("f-go");
+  function upd(){
+    var n=document.getElementById("f-n").value.trim(),l=document.getElementById("f-l").value,d=document.getElementById("f-d").value;
+    var t="Hola, quiero pedir turno."+(n?" Soy "+n+".":"")+" Servicio: "+sel.value+(l!=="No aplica"?" (cabello "+l.toLowerCase()+")":"")+". Día preferido: "+d+".";
+    go.href=WA+encodeURIComponent(t);
+  }
+  ["f-n","f-s","f-l","f-d"].forEach(function(id){var e=document.getElementById(id);e.addEventListener("input",upd);e.addEventListener("change",upd)});
+  upd();
+  var cd=document.getElementById("cd");
+  function tick(){
+    var n=new Date(),t=new Date(Date.UTC(n.getUTCFullYear(),n.getUTCMonth(),n.getUTCDate(),21,0,0));
+    t.setUTCDate(t.getUTCDate()+((5-t.getUTCDay()+7)%7));
+    if(t<=n)t.setUTCDate(t.getUTCDate()+7);
+    var m=Math.floor((t-n)/60000),d=Math.floor(m/1440),h=Math.floor((m%1440)/60),mi=m%60;
+    cd.textContent=d>0?"Faltan "+d+(d===1?" día y ":" días y ")+h+" h":"Faltan "+h+" h y "+mi+" min";
+  }
+  tick();setInterval(tick,60000);
+})();
+</script>
+<script>
+(function(){
+  var rm=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var sp=document.getElementById("splash"); if(sp){setTimeout(function(){if(sp.parentNode)sp.parentNode.removeChild(sp)},4300)}
+  var h=document.querySelector("header"),pb=document.getElementById("pbar");
+  function onS(){var y=window.pageYOffset||0;if(h)h.classList.toggle("scrolled",y>8);if(pb){var m=document.documentElement.scrollHeight-window.innerHeight;pb.style.transform="scaleX("+(m>0?Math.min(y/m,1):0)+")"}}
+  window.addEventListener("scroll",onS,{passive:true});onS();
+  if(rm||!("IntersectionObserver" in window))return;
+  var els=[].slice.call(document.querySelectorAll(".head,.card,.steps li,.quotes blockquote,.gallery figure,.facts,.banner,.form,details,.team,.visit>div,.cta .box,.tones>div"));
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var t=e.target;t.classList.add("in");io.unobserve(t);setTimeout(function(){t.style.transitionDelay=""},1300)}})},{threshold:.1,rootMargin:"0px 0px -5% 0px"});
+  els.forEach(function(el){var i=[].indexOf.call(el.parentElement.children,el);el.classList.add("rv");el.style.transitionDelay=(i%4)*90+"ms";io.observe(el)});
+})();
+</script>
+<script>
+(function(){
+  var list=document.getElementById("list"),sel=document.getElementById("f-s");
+  function pick(e){var p=e.target.closest&&e.target.closest(".price");if(!p||!sel)return;
+    sel.value=p.getAttribute("data-s");sel.dispatchEvent(new Event("change"));
+    document.getElementById("turnos").scrollIntoView({behavior:"smooth"});}
+  if(list){list.addEventListener("click",pick);list.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();pick(e)}})}
+  if(!window.matchMedia||!matchMedia("(pointer:fine)").matches)return;
+  var c=document.getElementById("cur");if(!c)return;
+  var NAT="input,select,textarea,option",CLK="a,button,summary,label,.tab,.price",on=false;
+  document.addEventListener("mousemove",function(e){
+    c.style.transform="translate3d("+e.clientX+"px,"+e.clientY+"px,0)";
+    if(!on){on=true;document.body.classList.add("has-cur")}
+    var t=e.target&&e.target.closest?e.target:null,nat=t&&t.closest(NAT);
+    c.classList.toggle("off",!!nat);c.classList.toggle("open",!!(t&&!nat&&t.closest(CLK)));
+  },{passive:true});
+  document.documentElement.addEventListener("mouseleave",function(){c.classList.add("off")});
+  document.documentElement.addEventListener("mouseenter",function(){c.classList.remove("off")});
+  document.addEventListener("mousedown",function(){c.classList.add("down")});
+  document.addEventListener("mouseup",function(){c.classList.remove("down")});
+  document.addEventListener("click",function(e){
+    if(!(e.target.closest&&e.target.closest(CLK)))return;
+    for(var i=0;i<8;i++){var a=Math.PI*2*i/8+Math.random()*.4,r=22+Math.random()*16,s=document.createElement("i");
+      s.className="sn";s.style.left=e.clientX+"px";s.style.top=e.clientY+"px";
+      s.style.setProperty("--dx",Math.cos(a)*r+"px");s.style.setProperty("--dy",Math.sin(a)*r+"px");
+      document.body.appendChild(s);(function(n){setTimeout(function(){if(n.parentNode)n.parentNode.removeChild(n)},700)})(s)}
+  });
+})();
+</script>
+</body>
+</html>
